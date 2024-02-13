@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Random Quotes</title>
+</head>
+<style>
+    .spinner {
+        margin-top: 4rem;
+    }
+
+    #spinnerBoder{
+        display: none;
+    }
+
+    #quote {
+        width: 400px;
+    }
+
+    .contQuotes {
+        margin-top: 1rem;
+    }
+</style>
+<body>
+    <div class="container bg-dark">
+        <header class="d-flex justify-content-center py-3">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><span class="nav-link active" id="randomQuote" type="button">Random Quote</span></li>
+                <li class="nav-item"><span class="nav-link">Character Quote</span></li>
+                <li class="nav-item"><span class="nav-link">Anime Quote</span></li>
+            </ul>
+        </header>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center contQuotes">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" id="quote">
+            
+        </div>
+    </div>
+    <div class="d-flex justify-content-center spinner">
+        <div class="spinner-border" role="status" id="spinnerBoder"></div>
+    </div>
+
+
+
+<script src="scripts/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
