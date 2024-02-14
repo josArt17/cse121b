@@ -6,7 +6,7 @@ let link = "https://image.tmdb.org/t/p/original";
 
 const randomButton = document.getElementById("randomQuote");
 
-const contQuote = document.getElementById('quote');
+const contQuote = document.getElementById('contQuotes');
 
 const spinner = document.getElementById('spinnerBoder');
 
