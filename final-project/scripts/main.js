@@ -6,25 +6,25 @@ let link = "https://image.tmdb.org/t/p/original";
 
 const randomButton = document.getElementById("randomQuote");
 
-const contQuote = document.getElementById('contQuotes');
 
+const contQuote = document.getElementById('contQuotes');
 const spinner = document.getElementById('spinnerBoder');
 
 const data = [];
-const image = [];
 
-const getQuote = async () => {
+const getQuote = async (url) => {
     spinner.style.display = 'block';
-    const response = await fetch(randomUrl);
+    const response = await fetch(url);
     spinner.style.display = 'none';
     if (response.ok) {
         const dataQuote = await response.json();
         data.push(dataQuote);
         showQuote(data);
     } else {
-        console.log("Error al consumir la informacion");
+        console.log("Error to get data");
     }
-}
+};
+
 
 const searchImage = async (anime) => {
     let nameAnime = anime.toLowerCase();
@@ -108,6 +108,7 @@ function showQuote(array){
 }
 
 randomButton.addEventListener('click', function(){
-    getQuote();
-}); 
+    getQuote(randomUrl);
+});
+
 
